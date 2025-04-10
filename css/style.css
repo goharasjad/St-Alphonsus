@@ -1,0 +1,526 @@
+/* Common styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #0d1b2aff;
+    background-color: #e0e1ddff;
+    margin: 0;
+    padding: 0;
+}
+
+.container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.error { 
+    color: #dc3545; 
+    font-size: 0.9em; 
+}
+
+.message { 
+    padding: 12px 15px; 
+    margin-bottom: 20px; 
+    border-radius: 6px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.success { 
+    background-color: #e0e1ddff; 
+    color: #1b263bff; 
+    border-left: 4px solid #415a77ff; 
+}
+
+.error-msg { 
+    background-color: #ffe5e8; 
+    color: #dc3545; 
+    border-left: 4px solid #dc3545; 
+}
+
+/* Form elements */
+label { 
+    display: block; 
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #1b263bff;
+}
+
+input[type=text], 
+input[type=email], 
+input[type=tel], 
+input[type=number], 
+input[type=date],
+select, 
+textarea { 
+    width: 100%; 
+    padding: 10px 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #415a77ff;
+    box-shadow: 0 0 0 3px rgba(119, 141, 169, 0.25);
+    outline: none;
+}
+
+fieldset { 
+    margin-bottom: 25px; 
+    padding: 20px; 
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+legend { 
+    font-weight: 600; 
+    padding: 0 10px;
+    color: #1b263bff;
+}
+
+button { 
+    padding: 10px 16px; 
+    background-color: #415a77ff; 
+    color: #e0e1ddff; 
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+button:hover { 
+    background-color: #1b263bff;
+}
+
+.field-error { 
+    border-color: #dc3545; 
+}
+
+/* Action buttons */
+.actions { 
+    margin-top: 25px; 
+    display: flex;
+    gap: 10px;
+}
+
+.actions a {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #778da9ff;
+    color: #e0e1ddff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.actions a:hover { 
+    background-color: #415a77ff;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #bd2130;
+}
+
+/* Tables */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 25px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+th, td { 
+    padding: 12px 15px; 
+    text-align: left; 
+}
+
+th { 
+    background-color: #1b263bff;
+    color: #e0e1ddff;
+    font-weight: 500;
+    cursor: pointer; 
+}
+
+tr:nth-child(even) {
+    background-color: #e0e1ddff;
+}
+
+tr:hover { 
+    background-color: #778da9ff;
+    color: #e0e1ddff;
+}
+
+.actions-col { 
+    width: 150px; 
+}
+
+.actions-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 5px;
+    background-color: #778da9ff;
+    color: #e0e1ddff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.edit-btn { 
+    background-color: #415a77ff;
+}
+
+.actions-btn:hover { 
+    background-color: #1b263bff;
+}
+
+.add-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #415a77ff;
+    color: #e0e1ddff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover { 
+    background-color: #1b263bff;
+}
+
+/* Sorting */
+.sort-icon::after {
+    content: "▼";
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+.sort-asc::after { 
+    content: "▲"; 
+}
+
+/* Empty states */
+.no-records { 
+    text-align: center; 
+    padding: 25px; 
+    background-color: #e0e1ddff;
+    border-radius: 6px;
+    color: #1b263bff;
+    font-weight: 500;
+    margin: 25px 0;
+}
+
+/* Card styles */
+.teacher-details, .class-details, .parent-details, .pupil-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(13, 27, 42, 0.1);
+}
+
+.info-section { 
+    margin-bottom: 25px; 
+}
+
+.info-section h3 { 
+    font-size: 1.2em; 
+    border-bottom: 2px solid #778da9ff; 
+    padding-bottom: 8px; 
+    margin-bottom: 15px;
+    color: #1b263bff;
+    font-weight: 600;
+}
+
+.info-row { 
+    display: flex; 
+    margin-bottom: 10px; 
+}
+
+.info-label { 
+    font-weight: 600; 
+    width: 150px; 
+    flex-shrink: 0;
+    color: #415a77ff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #415a77ff;
+    color: #e0e1ddff;
+}
+
+.btn-secondary {
+    background-color: #778da9ff;
+    color: #e0e1ddff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.status-cleared {
+    background-color: #e0e1ddff;
+    color: #1b263bff;
+}
+
+.status-pending {
+    background-color: #778da9ff;
+    color: #e0e1ddff;
+}
+
+.status-expired {
+    background-color: #ffe5e8;
+    color: #dc3545;
+}
+
+.status-not-required {
+    background-color: #f1f1f1;
+    color: #666;
+}
+
+/* Classes */
+.class-names {
+    font-size: 0.9em;
+}
+
+.class-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 2px;
+    background-color: #778da9ff;
+    border-radius: 20px;
+    font-size: 0.85em;
+    color: #e0e1ddff;
+    font-weight: 500;
+}
+
+.no-classes, .no-teacher {
+    color: #888;
+    font-style: italic;
+}
+
+/* Warning boxes */
+.teacher-assigned-warning,
+.assigned-classes-warning,
+.linked-pupils-warning {
+    background-color: #778da9ff;
+    color: #e0e1ddff;
+    border-left: 4px solid #1b263bff;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.teacher-change-warning {
+    background-color: #ffe5e8;
+    color: #dc3545;
+    border-left: 4px solid #dc3545;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+/* Wider container for lists */
+.container-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Pupil-specific styles */
+.pupil-header { 
+    border-bottom: 2px solid #778da9ff; 
+    padding-bottom: 15px; 
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section { 
+    margin-bottom: 30px; 
+}
+
+.section-title { 
+    font-weight: 600; 
+    color: #1b263bff; 
+    font-size: 1.2em; 
+    margin-bottom: 15px;
+    border-bottom: 2px solid #778da9ff;
+    padding-bottom: 8px;
+}
+
+.detail-row { 
+    display: grid; 
+    grid-template-columns: 150px 1fr; 
+    margin-bottom: 10px;
+}
+
+.label { 
+    font-weight: 600; 
+    color: #415a77ff; 
+}
+
+.medical-notes {
+    background-color: #778da9ff;
+    padding: 15px;
+    border-left: 4px solid #1b263bff;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: #e0e1ddff;
+}
+
+.parent-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.empty-list-message {
+    padding: 20px;
+    background-color: #e0e1ddff;
+    border-radius: 6px;
+    text-align: center;
+    margin: 25px 0;
+    color: #1b263bff;
+    font-weight: 500;
+}
+
+/* Dashboard specific styles */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.main-navigation {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 18px 10px;
+    text-decoration: none;
+    color: #1b263bff;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #e0e1ddff;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+    margin-top: 0;
+    color: #415a77ff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1b263bff;
+    margin: 15px 0;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.chart-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.chart-card h3 {
+    margin-top: 0;
+    color: #1b263bff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Table header styling */
+table thead th {
+    background-color: #333;
+    color: white;
+}
+
+/* Table header links styling */
+table thead th a {
+    color: white;
+    text-decoration: none;
+}
+
+table thead th a:hover {
+    text-decoration: underline;
+}
